@@ -1,0 +1,137 @@
+/* 
+Theme Name: Design Code Demo
+Theme URI: http://laureno.dmitstudent.ca/dmit2032/dc-demo
+Author: Lauren Olsen
+Author URI: http://laurenolsen.ca
+Description: Class Demo & Lesson WordPress Site Build
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: designcodedemo
+*/
+
+html {
+    font-size: 62.5%; /* 10px */
+}
+
+body {
+    margin: 0;
+    padding: 2%;
+    font-family: 'sans-serif';
+    font-size: 1.8rem;
+    color: #1e1e1e;
+    font-family: 'Cabin', sans-serif;
+
+}
+
+/* TYPOGRAPHY */
+h1 {
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*** structural styling // general ***/
+.container {
+    max-width: 100%;
+}
+
+@media(min-width:1200px) {
+    .container {
+        max-width: 160rem;
+        border: 1px solid tomato;
+        padding: 0 3rem;
+    }
+}
+
+/********** banner content **********/
+.home .banner {
+    /* background: teal; */
+    min-height: 60rem;
+    padding: 0 1.5rem;
+}
+
+.home .banner-content {
+    padding-top: 4rem;
+}
+
+.home .banner-img {
+    background: url(/dmit2032/demo-design-code/wp-content/uploads/2020/09/banner-image.jpg);
+    display: flex;
+}
+
+.read-more-link {
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    color: darkorange;
+}
+
+/** header & nav **/
+header > .inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+
+nav {
+    background-color: #212121;
+    min-width: 30rem;
+    height: 100vh;
+}
+
+/** default state - when shown */
+.off-canvas-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+ul.main-menu {
+    padding: 0;
+    margin: 5rem 0 0;
+}
+
+ul.main-menu li {
+    line-height: 4;
+    border-bottom: 0.1rem solid #f7f7f2;
+    text-align: center;
+}
+
+ul.main-menu li a {
+    color: #f7f7f2;
+    text-transform: capitalize;
+}
+
+/** toggle icon **/
+.toggle-icon span {
+    width: 6rem;
+    height: 1rem;
+    margin-bottom: 0.6rem;
+    border-radius: 10rem;
+    background-color: #00c6cf;
+    display: block;
+    cursor: pointer;
+}
+
+/* find the width of the element and move it that far the left. */
+.off-canvas-nav {
+    left: -30rem;
+    transition:  left 1s ease-in-out;
+}
+
+.is-active .off-canvas-nav {
+    top: 0;
+    left: 0;
+    transition: left 1s ease-in-out;
+}
